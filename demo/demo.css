@@ -1,0 +1,62 @@
+/* Light only: no prefers-color-scheme rules, so the dark version in the screenshots is Nightjar's. */
+:root {
+  color-scheme: light;
+  --text: #1c1f1d;
+  --muted: #5f6762;
+  --rule: #e2e5e1;
+  --accent: #2f6b3f;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Apple SD Gothic Neo", "PingFang SC", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+:lang(zh-Hant) body, body:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
+.column { width: min(1040px, 100%); margin: 0 auto; padding: 0 18px; }
+
+.masthead { border-bottom: 1px solid var(--rule); background: #fff; }
+.masthead .column { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.masthead .title { font: 700 23px/1 Georgia, "Times New Roman", serif; letter-spacing: 0.02em; color: var(--accent); }
+.menu { display: grid; gap: 4px; width: 22px; }
+.menu i { display: block; height: 2px; background: var(--text); border-radius: 1px; }
+.search { width: 18px; height: 18px; border: 2px solid var(--text); border-radius: 50%; position: relative; }
+.search::after { content: ""; position: absolute; width: 8px; height: 2px; background: var(--text); right: -7px; bottom: -3px; transform: rotate(45deg); }
+
+.layout { display: block; padding-top: 18px; }
+@media (min-width: 900px) {
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 44px; padding-top: 28px; }
+}
+article { max-width: 680px; }
+.kicker { margin: 0 0 6px; color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
+h1 { margin: 0 0 10px; font: 700 32px/1.18 Georgia, "Times New Roman", "Hiragino Mincho ProN", "AppleMyungjo", "Songti SC", serif; }
+:lang(zh-Hant) h1 { font-family: Georgia, "Songti TC", serif; }
+.dek { margin: 0 0 10px; color: #3a423d; font-size: 19px; line-height: 1.45; }
+.byline { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+figure { margin: 0 0 18px; }
+.hero { display: block; width: 100%; height: auto; border-radius: 8px; }
+figcaption { margin-top: 6px; color: var(--muted); font-size: 13px; }
+article p { margin: 0 0 16px; }
+
+.note { margin: 4px 0 20px; padding: 14px 16px; background: #fff7e0; border: 1px solid #efd99a; border-left: 4px solid #e2b33c; border-radius: 6px; }
+.note h3 { margin: 0 0 4px; font-size: 15px; color: #7a5a0c; }
+.note p { margin: 0; font-size: 16px; }
+
+table { width: 100%; margin: 4px 0 22px; border-collapse: collapse; font-size: 15px; }
+caption { text-align: left; font-weight: 700; padding-bottom: 8px; }
+td { padding: 8px 10px; border-top: 1px solid var(--rule); }
+td:first-child { color: var(--muted); width: 42%; }
+tr:nth-child(odd) td { background: #f4f6f3; }
+
+a { color: #1f5fae; }
+.more { font-size: 15px; }
+.more span { font-weight: 700; }
+.listen { margin: 4px 0 28px; padding: 11px 18px; border: 0; border-radius: 999px; background: var(--accent); color: #fff; font: 700 16px/1.2 -apple-system, BlinkMacSystemFont, sans-serif; }
+
+.side h2 { margin: 0 0 10px; padding-top: 12px; border-top: 3px solid var(--text); font-size: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+.side ol { margin: 0; padding-left: 22px; }
+.side li { margin-bottom: 10px; font-weight: 600; line-height: 1.35; }
+.side a { color: var(--text); text-decoration: none; }
+@media (max-width: 899px) { .side { margin: 8px 0 120px; } }

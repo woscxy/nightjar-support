@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="A sample article for seeing what Nightjar does to a website without a dark theme of its own.">
+  <title>Wildlife Journal</title>
+  <link rel="stylesheet" href="demo.css">
+  <!-- A light-only page on purpose: no prefers-color-scheme rules and no dark colors, so whatever
+       dark version you see comes from Nightjar. Used for the App Store screenshots
+       (Scripts/capture-store-screenshots.py). ?lang=ja picks a language. -->
+  <script src="strings.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="column">
+      <span class="menu" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="title">Wildlife Journal</span>
+      <span class="search" aria-hidden="true"></span>
+    </div>
+  </header>
+  <main class="column layout">
+    <article>
+      <p class="kicker" data-text="kicker"></p>
+      <h1 data-text="title"></h1>
+      <p class="dek" data-text="dek"></p>
+      <p class="byline" data-text="byline"></p>
+      <figure>
+        <svg class="hero" viewBox="0 0 640 300" role="img" data-label="caption">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe3c6"/><stop offset="1" stop-color="#e4e2f2"/></linearGradient>
+          </defs>
+          <rect width="640" height="300" fill="url(#sky)"/>
+          <circle cx="520" cy="78" r="52" fill="#fff4dc" opacity="0.6"/>
+          <circle cx="520" cy="78" r="30" fill="#fffaf0"/>
+          <path d="M486 132 l7 -5 l1 7 z M498 128 l7 4 l-7 3 z M440 104 l6 -4 l1 6 z M451 101 l6 3 l-6 3 z" fill="#b9a68a"/>
+          <path d="M0 220 C80 190 150 196 230 214 C320 234 380 200 460 196 C540 192 600 214 640 206 L640 300 L0 300 Z" fill="#cdd8c4"/>
+          <path d="M0 252 C90 236 170 246 260 258 C350 270 430 246 520 248 C580 250 620 262 640 258 L640 300 L0 300 Z" fill="#b3c4a8"/>
+          <path d="M40 268 C160 240 300 222 420 214 C500 209 570 206 620 196" fill="none" stroke="#8b6b52" stroke-width="13" stroke-linecap="round"/>
+          <path d="M150 248 C135 228 132 214 140 200 M500 208 C516 190 532 184 548 186" fill="none" stroke="#8b6b52" stroke-width="5" stroke-linecap="round"/>
+          <path d="M392 196 L486 186 L486 198 L392 212 Z" fill="#87725d"/>
+          <ellipse cx="330" cy="200" rx="80" ry="24" fill="#a28d76" transform="rotate(-6 330 200)"/>
+          <path d="M282 188 C320 170 380 172 440 186 C410 198 350 206 296 204 Z" fill="#7d6956"/>
+          <path d="M300 192 l14 -4 M330 186 l16 -2 M362 186 l15 1 M392 189 l14 2 M318 198 l12 -2 M352 196 l14 0" stroke="#5c4a3c" stroke-width="2.5" stroke-linecap="round"/>
+          <ellipse cx="432" cy="190" rx="6" ry="3" fill="#f3ede2" transform="rotate(-6 432 190)"/>
+          <circle cx="262" cy="190" r="24" fill="#a8927a"/>
+          <path d="M246 172 C256 166 270 166 280 172" fill="none" stroke="#6e5b4a" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="256" cy="185" r="6" fill="#2c2520"/>
+          <circle cx="254.5" cy="183.5" r="1.8" fill="#ffffff"/>
+          <path d="M238 192 L246 187 L247 196 Z" fill="#4b3c31"/>
+          <ellipse cx="252" cy="205" rx="9" ry="3.2" fill="#f3ede2"/>
+        </svg>
+        <figcaption data-text="caption"></figcaption>
+      </figure>
+      <p data-text="p1"></p>
+      <aside class="note">
+        <h3 data-text="noteTitle"></h3>
+        <p data-text="note"></p>
+      </aside>
+      <p data-text="p2"></p>
+      <table>
+        <caption data-text="tableTitle"></caption>
+        <tbody id="facts"></tbody>
+      </table>
+      <p data-text="p3"></p>
+      <p data-text="p4"></p>
+      <p class="more"><span data-text="more"></span> <a href="#listen" data-text="link1"></a> · <a href="#walks" data-text="link2"></a></p>
+      <button type="button" class="listen" data-text="button"></button>
+    </article>
+    <aside class="side">
+      <h2 data-text="mostRead"></h2>
+      <ol>
+        <li><a href="#read1" data-text="read1"></a></li>
+        <li><a href="#read2" data-text="read2"></a></li>
+        <li><a href="#read3" data-text="read3"></a></li>
+      </ol>
+    </aside>
+  </main>
+  <script>
+    for (const node of document.querySelectorAll("[data-text]")) node.textContent = demo.text[node.dataset.text];
+    for (const node of document.querySelectorAll("[data-label]")) node.setAttribute("aria-label", demo.text[node.dataset.label]);
+    const facts = document.getElementById("facts");
+    for (const [name, value] of demo.facts) {
+      const row = facts.insertRow();
+      row.insertCell().textContent = name;
+      row.insertCell().textContent = value;
+    }
+  </script>
+</body>
+</html>
