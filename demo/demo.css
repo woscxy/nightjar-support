@@ -20,10 +20,7 @@ body {
 .masthead { border-bottom: 1px solid var(--rule); background: #fff; }
 .masthead .column { display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .masthead .title { font: 700 23px/1 Georgia, "Times New Roman", serif; letter-spacing: 0.02em; color: var(--accent); }
-.menu { display: grid; gap: 4px; width: 22px; }
-.menu i { display: block; height: 2px; background: var(--text); border-radius: 1px; }
-.search { width: 18px; height: 18px; border: 2px solid var(--text); border-radius: 50%; position: relative; }
-.search::after { content: ""; position: absolute; width: 8px; height: 2px; background: var(--text); right: -7px; bottom: -3px; transform: rotate(45deg); }
+.icon { width: 24px; height: 24px; color: var(--text); }
 
 .layout { display: block; padding-top: 18px; }
 @media (min-width: 900px) {
