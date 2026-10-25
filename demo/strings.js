@@ -28,7 +28,8 @@ const DEMO_STRINGS = {
   ja: {
     text: {
       kicker: "野生動物",
-      title: "月明かりの下で狩りをする鳥",
+      // U+200B marks where the title may wrap (see demo.css): between phrases, never before 鳥 alone.
+      title: "月明かりの下で​狩りをする鳥",
       dek: "ヨタカは昼のあいだ目立つ場所でそのまま眠り、夕暮れに目を覚まして、飛びながらガを捕らえます。",
       byline: "Wildlife Journal · 5分で読めます",
       caption: "ヨーロッパヨタカ（イラスト：Wildlife Journal）",

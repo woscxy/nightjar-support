@@ -30,6 +30,7 @@ article { max-width: 680px; }
 .kicker { margin: 0 0 6px; color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
 h1 { margin: 0 0 10px; font: 700 32px/1.18 Georgia, "Times New Roman", "Hiragino Mincho ProN", "AppleMyungjo", "Songti SC", serif; }
 :lang(zh-Hant) h1 { font-family: Georgia, "Songti TC", serif; }
+:lang(ja) h1 { word-break: keep-all; }
 .dek { margin: 0 0 10px; color: #3a423d; font-size: 19px; line-height: 1.45; }
 .byline { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
 figure { margin: 0 0 18px; }
