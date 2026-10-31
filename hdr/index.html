@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <!-- Light only, like the demo article, so the dark version comes from Nightjar. The media are
+       research/night-viewing-2026-10-30/make-assets.sh's: in each, the left square is at HDR peak
+       brightness and the right one at ordinary white. -->
+  <meta name="color-scheme" content="light">
+  <title>Nightjar HDR test</title>
+  <style>
+    body { margin: 0 auto; max-width: 720px; padding: 20px; background: #fff; color: #15191c;
+      font: 17px/1.55 -apple-system, BlinkMacSystemFont, sans-serif; }
+    h1 { font-size: 1.6em; line-height: 1.2; }
+    figure { margin: 18px 0; }
+    img, video { display: block; width: 100%; border-radius: 8px; }
+    figcaption { color: #5a6670; font-size: 0.9em; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Nightjar HDR test</h1>
+  <p>This page has an HDR photo and an HDR video. In each, the left square is as bright as HDR goes and the right one is ordinary white.</p>
+  <p>You need a screen that can show HDR (iPhone 12 or later, a recent iPad Pro, or a Mac with an XDR or Liquid Retina display), iOS 26, iPadOS 26 or Safari 26 or later, and the screen brightness below maximum.</p>
+  <ul>
+    <li>With Nightjar on and <strong>Limit HDR brightness</strong> on (the default), the left squares look plain white, like any other white on the screen.</li>
+    <li>In Nightjar's <strong>Settings</strong>, switch <strong>Limit HDR brightness</strong> off: the left squares glow brighter than everything else on the screen.</li>
+  </ul>
+  <figure>
+    <img src="hdr-pq.avif" alt="Two squares: HDR peak brightness on the left, white on the right">
+    <figcaption>HDR photo (AVIF, PQ)</figcaption>
+  </figure>
+  <figure>
+    <video src="hdr-pq.mp4" muted autoplay loop playsinline></video>
+    <figcaption>HDR video (HEVC, PQ)</figcaption>
+  </figure>
+</body>
+</html>
